@@ -18,8 +18,8 @@ A basic success example might be:
 				"role": "Software Engineer"
 			},
 			{
-				"name": "Juanito",
-				"age": 27,
+				"name": "Alex",
+				"age": 21,
 				"role": "Data sciencetist"
 			}
 		]
@@ -49,9 +49,9 @@ When an API call is successful, the json-responsive-convention object is used as
 		"timestamp": "2020-08-11 06:25:00.123"
 	},
 	"links": {
-		"current_page": "http://localhost/api/v1/employers/2",
-		"prev_page": "http://localhost/api/v1/employers/1",
-		"next_page": "http://localhost/api/v1/employers/3"
+		"currentPage": "http://localhost/api/v1/employers/2",
+		"prevPage": "http://localhost/api/v1/employers/1",
+		"nextPage": "http://localhost/api/v1/employers/3"
 	},
 	"data": {
 		"employers": [
@@ -61,8 +61,8 @@ When an API call is successful, the json-responsive-convention object is used as
 				"role": "Software Engineer"
 			},
 			{
-				"name": "Juanito",
-				"age": 27,
+				"name": "Alex",
+				"age": 21,
 				"role": "Software Engineer"
 			}
 		]
@@ -94,9 +94,7 @@ When an API call is rejected due to invalid data or call conditions, the json-re
 	"status": {
 		"type": "fail",
 		"code": "400",
-		"timestamp": "2020-08-11 06:25:00.123"
-	},
-	"data": {
+		"timestamp": "2020-08-11 06:25:00.123",
 		"message": "Field \"name\" must not be null when creating employer"
 	}
 }
@@ -114,9 +112,7 @@ When an API call fails due to an error on the server. For example:
 	"status": {
 		"type": "error",
 		"code": "504",
-		"timestamp": "2020-08-11 06:25:00.123"
-	},
-	"data": {
+		"timestamp": "2020-08-11 06:25:00.123",
 		"message": "Unable to connect with database"
 	}
 }
